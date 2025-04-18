@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Solver</title>
+    <script src="script.js" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="design">
+      <div class="design__element design__element--1">-</div>
+      <div class="design__element design__element--2">15</div>
+      <div class="design__element design__element--3">2</div>
+      <div class="design__element design__element--4">+</div>
+      <div class="design__element design__element--5">÷</div>
+      <div class="design__element design__element--6">7</div>
+      <div class="design__element design__element--7">279</div>
+    </div>
+    <div class="solver container">
+      <h1 class="solver__title">Math Solver</h1>
+      <form data-solver-form class="solver__form">
+        <input data-solver-input class="solver__field solver__field--input" type="text" />
+        <button class="solver__button btn" type="submit">
+          <img class="svg" src="assets/solve.svg" alt="solve" />
+        </button>
+        <div data-solver-output class="solver__field solver__field--output"></div>
+      </form>
+    </div>
+
+    <div class="information container">
+      Math Solver is a versatile calculator that handles basic arithmetic operations and advanced
+      mathematical expressions. Simply enter your calculation with your keyboard. For examples and
+      detailed operator information, click
+      <span data-information-open-modal class="information__open-modal">here</span>.
+    </div>
+
+    <div data-modal class="modal container">
+      <h2 class="modal__title">Operators</h2>
+      <button data-modal-button-close class="modal__button modal__button--close btn">
+        <img class="svg" src="assets/close.svg" alt="close" />
+      </button>
+      <button data-modal-button-left class="modal__button modal__button--slide-left btn">
+        <img class="svg" src="assets/left.svg" alt="left" />
+      </button>
+      <button data-modal-button-right class="modal__button modal__button--slide-right btn">
+        <img class="svg" src="assets/right.svg" alt="right" />
+      </button>
+      <button data-modal-button-try class="modal__button modal__button--try btn">Try it</button>
+
+      <div data-modal-slider class="modal__slider">
+        <div class="modal__slide">
+          <div class="modal__operation">3+2</div>
+          <div class="modal__information">
+            The plus sign key (+) is used to add two numbers together.
+          </div>
+        </div>
+
+        <div class="modal__slide">
+          <div class="modal__operation">4-1</div>
+          <div class="modal__information">
+            The minus sign key (-) is used to subtract one number from another.
+          </div>
+        </div>
+
+        <div class="modal__slide">
+          <div class="modal__operation">2*7</div>
+          <div class="modal__information">
+            The asterisk key (*) is used to multiply two numbers.
+          </div>
+        </div>
+
+        <div class="modal__slide">
+          <div class="modal__operation">8/4</div>
+          <div class="modal__information">
+            The forward slash key (/) is used to divide one number by another.
+          </div>
+        </div>
+
+        <div class="modal__slide">
+          <div class="modal__operation">3^2</div>
+          <div class="modal__information">
+            The caret key (^) is used to raise a number to the power of another number.
+          </div>
+        </div>
+
+        <div class="modal__slide">
+          <div class="modal__operation">(1+2)</div>
+          <div class="modal__information">
+            Parentheses (( and )) are used to group parts of an expression and control the order of
+            operations.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-modal-overlay class="modal__overlay"></div>
+  </body>
+</html>
