@@ -33,7 +33,7 @@ modalButtonLeft.addEventListener("click", () => {
 });
 
 modalButtonTry.addEventListener("click", () => {
-  const testCalculation = getTestCalculation();
+  const testCalculation = getTestCalculation(modalSlider);
   solverInput.value = testCalculation;
   solverOutput.textContent = solveCalculation(testCalculation);
   openOrCloseModal(modal, modalOverlay);
