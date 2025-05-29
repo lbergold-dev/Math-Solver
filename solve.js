@@ -16,7 +16,7 @@ const ORDER_OF_OPERATIONS = [
 ];
 
 const REGEX = {
-  allowedChars: /^[0-9.\-+*/^()[\]]+$/,
+  allowedChars: /^[0-9.\-+*/^()[\]eE]+$/,
   spaces: /\s+/g,
   minusBeforeBracket: /(^|[^\d\)])-(?=\()/g,
   bracketContent: /\(([^()]*)\)/,
