@@ -19,7 +19,7 @@ const REGEX = {
   allowedChars: /^[0-9.\-+*/^()[\]]+$/,
   spaces: /\s+/g,
   minusBeforeBracket: /(^|[^\d\)])-(?=\()/g,
-  bracketContent: /\(([^()]+)\)/,
+  bracketContent: /\(([^()]*)\)/,
   mathTokens: /(?<=^|[+\-*/^])[+-]?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?|[+\-*/^]/g,
   exponential: /e([+-]\d+)/,
 };
@@ -43,6 +43,7 @@ function preprocessInput(input) {
 }
 
 function evaluate(expr) {
+  if (expr.includes("Error")) return "Error";
   let tokens = tokenize(expr);
   tokens = parseNumbers(tokens);
 
